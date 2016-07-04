@@ -31,7 +31,7 @@ getTomorrow = ->
     return "#{yyyy}-#{mm}-#{dd}"
 
 module.exports = (robot) ->
-    robot.respond 'today', (response) -> 
+    robot.respond '/today/i', (response) -> 
         userid = robot.brain.get "resource-guru-#{response.message.user.id}"
         if !userid
             response.send 'Tell me your Resource Guru user id first with resource-guru-me <id>'
